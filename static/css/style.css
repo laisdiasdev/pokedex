@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oxanium', cursive;
+}
+
+body {
+  text-align: center;
+  background: url('/static/images/cenario.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+main {
+  display: inline-block;
+  margin-top: 5%;
+  padding: 15px;
+  position: relative;
+}
+
+.pokedex {
+  width: 100%;
+  max-width: 425px;
+}
+
+.pokemon__image {
+  position: absolute;
+  bottom: 55%;
+  left: 50%;
+  transform: translate(-62%, 34%);
+  height: 15%;
+}
+
+/*.pokemon__data {
+  position: absolute;
+  font-weight: 600;
+  color: #aaa;
+  top: 54.5%;
+  right: 27%;
+  font-size: clamp(8px, 5vw, 25px);
+}*/
+
+.pokemon__name {
+  position: absolute;
+  font-weight: 600;
+  top: 54.5%;
+  right: 27%;
+  font-size: clamp(8px, 5vw, 25px);
+  color: #3a444d;
+  text-transform: capitalize;
+}
+
+.pokemon__number{
+    position: absolute;
+    font-weight: 600;
+    top: 54.5%;
+    right: 60%;
+    font-size: clamp(8px, 5vw, 25px);
+    color: #aaa;
+    text-transform: capitalize;
+}
+
+.pokemon__info {
+  position: absolute;
+  font-weight: 400;
+  width: 72%;
+  font-size: clamp(6px, 3vw, 15px);
+  top: 75%;
+  right: 16%;
+  color: #fff;
+  text-transform: capitalize;
+  display: flex;
+  gap: 10px;
+}
+
+.pokemon__type,
+.pokemon__weight,
+.pokemon__height {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+.pokemon__description {
+  position: absolute;
+  font-weight: 400;
+  font-size: clamp(6px, 3vw, 15px);
+  bottom: 16%;
+  right: 16%;
+  color: #fff;
+  text-transform: capitalize;
+  width: 72%;
+  text-align: left;
+}
+
+.form {
+  position: absolute;
+  width: 66%;
+  top: 65%;
+  left: 12.5%;
+}
+
+.input__search {
+  width: 100%;
+  padding: 4%;
+  outline: none;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #3a444d;
+  font-size: clamp(8px, 5vw, 1rem);
+  box-shadow: -3px 4px 0 #888, -5px 7px 0 #333
+}
+

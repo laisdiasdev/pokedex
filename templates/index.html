@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Links -->
+  <link rel="icon" href="{{ url_for('static', filename='favicons/favicon-16x16.png') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <!-- Main JS -->
+  <!--<script defer src="./js/script.js"></script>-->
+
+  <title>Pokédex</title>
+</head>
+<body>
+  
+  <main>
+    {% if pokemon %}
+    <img src="{{ pokemon.image }}" alt="pokemon" class="pokemon__image">
+
+    <h1 class="pokemon__data">
+      <span class="pokemon__number">{{ pokemon.id }}</span>
+      <span class="pokemon__name">{{ pokemon.name }}</span>
+      <div class="pokemon__info">
+        <span class="pokemon__type">Type: {{ pokemon.types | join(', ') }}</span>
+        <span class="pokemon__weight">Weight: {{ pokemon.weight }}</span>
+        <span class="pokemon__height">Height: {{ pokemon.height }}</span>
+      </div>
+      <div class="pokemon__description">Skills: {{ pokemon.abilities | join(', ') }}</div>
+    </h1>
+    {% endif %}
+
+    <form class="form" method = "post">
+      <input
+        type="search"
+        class="input__search"
+        name="pokemon_name"
+        placeholder="Name or Number"
+        required
+      />
+    </form>
+
+    <img src="{{ url_for('static', filename='images/pokedex.png') }}" alt="pokedex" class="pokedex">
+  </main>
+
+</body>
+</html>
